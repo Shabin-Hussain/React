@@ -8,6 +8,8 @@ function App() {
   const h1style= {color:'green',backgroundColor:'yellow',fontSize:'70px'}
 
   const subject='REACT'
+  const username='maxwell'
+
   return (
     //html code
   <>
@@ -21,8 +23,8 @@ function App() {
       <h1>My content is :{subject}</h1>
 
       <ul>
-        <li><Random/></li>
-        <li><Example/></li>
+        <li><Random uname={username}/></li>
+        <li style={{color:'red'}}><Example sub={subject}/></li>
       </ul>
       
   </>

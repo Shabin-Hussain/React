@@ -9,6 +9,7 @@ function App() {
 
   const subject='REACT'
   const username='maxwell'
+  const age = 27
 
   return (
     //html code
@@ -24,7 +25,7 @@ function App() {
 
       <ul>
         <li><Random uname={username}/></li>
-        <li style={{color:'red'}}><Example sub={subject}/></li>
+        <li style={{color:'red'}}><Example sub={subject} age={age}/></li>
       </ul>
       
   </>

@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Example({ sub,age }) { //props
+  const[concept,setConcept]=useState('hooks concept')
+
+ console.log(concept);
+ 
+
  /*  console.log(props); */
 
  console.log(sub);
@@ -35,10 +40,13 @@ function Example({ sub,age }) { //props
     :
     <p style={{ color: 'red', fontSize: '50px' }}>data shared is not react </p>}
 
+    <p>concept is : {concept}</p>
+
     {age==27 && 
       <p>age is {age}</p>
     }
 
+       <button className='btn btn-danger' onClick={()=>setConcept('Next.js')}>click</button>
       <button className='btn btn-success' onClick={buttonclick}>click</button>
        <button className='btn btn-primary ms-2' onClick={()=>addUser('Raj')}>click</button>
 

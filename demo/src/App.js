@@ -2,6 +2,7 @@ import './App.css';
 import myStyle from '../src/myStyle.module.css'
 import Random from './Random';
 import Example from './Example';
+import User from './User';
 
 function App() {
   //js code
@@ -26,6 +27,7 @@ function App() {
       <ul>
         <li><Random uname={username}/></li>
         <li style={{color:'red'}}><Example sub={subject} age={age}/></li>
+        <li><User/></li>
       </ul>
       
   </>

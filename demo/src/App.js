@@ -3,6 +3,7 @@ import myStyle from '../src/myStyle.module.css'
 import Random from './Random';
 import Example from './Example';
 import User from './User';
+import Register from './Register';
 
 function App() {
   //js code
@@ -29,6 +30,10 @@ function App() {
         <li style={{color:'red'}}><Example sub={subject} age={age}/></li>
         <li><User/></li>
       </ul>
+
+      <div className='w-100'>
+        <Register/>
+      </div>
       
   </>
   );

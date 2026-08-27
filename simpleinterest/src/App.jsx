@@ -1,10 +1,16 @@
 import './App.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useState } from 'react';
 
 
 
 function App() {
+  //states to hold data
+  const [principle, setPrinciple] = useState(0)
+  const [rate, setRate] = useState(0)
+  const [year, setYear] = useState(0)
+  const [interest, setInterest] = useState(0)
 
 
   return (
@@ -30,10 +36,10 @@ function App() {
             <TextField id="outlined-basic" label="Year (Yr)" variant="outlined" className='w-100' />
           </div>
 
-          <div className="d-flex">
-           
-            <Button variant="contained">Contained</Button>
-            <Button variant="outlined">Outlined</Button>
+          <div className="d-flex justify-content-between w-100 mt-4">
+
+            <Button variant="contained" color='success' style={{ width: '190px', height: '60px' }}>Calculate</Button>
+            <Button variant="outlined" style={{ width: '190px', height: '60px' }}>Reset</Button>
           </div>
         </form>
 

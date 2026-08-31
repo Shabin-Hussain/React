@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../components/Header'
+
 
 function Watchhistory() {
   return (
-    <div>Watchhistory</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 

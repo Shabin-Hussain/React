@@ -1,21 +1,18 @@
+import { faVideo } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 
+
 function Header() {
   return (
     <div>
-        <Navbar className="bg-body-tertiary">
+        <Navbar className="bg-transparent border">
         <Container>
           <Navbar.Brand href="#home">
-            <img
-              alt=""
-              src="/img/logo.svg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{' '}
-            React Bootstrap
+            <FontAwesomeIcon className='text-warning' icon={faVideo} beat size='2xl'/>
+            <span className='text-warning ms-3 fs-5'>Media Player</span>
           </Navbar.Brand>
         </Container>
       </Navbar>

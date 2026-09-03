@@ -3,12 +3,14 @@ import { Route, Routes } from 'react-router-dom'
 import Landingpage from './pages/Landingpage'
 import Home from './pages/Home'
 import Watchhistory from'./pages/Watchhistory'
+import Header from './components/Header'
 
 function App() {
 
 
   return (
     <>
+    <Header/>
     {/* / - base url */}
     <Routes>
       <Route path='/' element={<Landingpage/>}/>

@@ -4,8 +4,9 @@ import React from 'react'
 
 function Watchhistory() {
   return (
-    <div>
-      
+    <div className='text-white'>
+      wa tch history
+    
     </div>
   )
 }

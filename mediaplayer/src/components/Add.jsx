@@ -16,7 +16,7 @@ function Add() {
 
   return (
     <div className='d-flex align-items-center'>
-      <h5>Upload new video</h5>
+      <h5 id='h'>Upload new video</h5>
       <button className='btn mb-2' onClick={handleShow}><FontAwesomeIcon icon={faCloudArrowUp} size='xl' /></button>
 
       <Modal show={show} onHide={handleClose}>

@@ -45,39 +45,34 @@
   ],
   "category": [
     {
-      "CategoryName": "hghfg",
-      "allVideo": [],
+      "CategoryName": "malayalam",
+      "allVideo": [
+        {
+          "caption": "illuminati",
+          "image": "https://i.ytimg.com/vi/tOM-nWPcR4U/maxresdefault.jpg",
+          "url": "https://www.youtube.com/embed/NlL0_eyZeMs",
+          "id": 1
+        }
+      ],
       "id": 1
     },
     {
-      "CategoryName": "grg",
-      "allVideo": [],
+      "CategoryName": "cars",
+      "allVideo": [
+        {
+          "caption": "Bentley",
+          "image": "https://www.bentleymotors.com/content/dam/bm/websites/bmcom/bentleymotors-com/models/26my/bentayga-speed/Model%20Stage%20Main.jpg/_jcr_content/renditions/original.image_file.1286.551.file/Model%20Stage%20Main.jpg",
+          "url": "https://www.youtube.com/embed/811a9WYfOD4",
+          "id": 2
+        },
+        {
+          "caption": "mclaren",
+          "image": "https://cars-assets-production.mclaren.com/5676/homepage-banner-50-red-mobile.jpg",
+          "url": "https://www.youtube.com/embed/tk5B4GSbgD4",
+          "id": 3
+        }
+      ],
       "id": 2
-    },
-    {
-      "CategoryName": "tamil",
-      "allVideo": [],
-      "id": 3
-    },
-    {
-      "CategoryName": "tamil",
-      "allVideo": [],
-      "id": 4
-    },
-    {
-      "CategoryName": "tamil",
-      "allVideo": [],
-      "id": 5
-    },
-    {
-      "CategoryName": "tamil",
-      "allVideo": [],
-      "id": 6
-    },
-    {
-      "CategoryName": "hi",
-      "allVideo": [],
-      "id": 7
     }
   ],
   "history": []

@@ -3,23 +3,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Col, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import useFetch from '../hooks/useFetch';
 
 
 
 
 
 function Home() {
+  const data = useFetch('https://dummyjson.com/products')
+  console.log(data);
+  
   return (
     <>
     <Row className='w-100 p-3 my-5'>
-      <Col sm={12} md={4} lg={3} className='mt-3 d-flex justify-content-center p-3'>
+      {data?.length>0?
+      data?.map((item)=>(<Col sm={12} md={4} lg={3} className='mt-3 d-flex justify-content-center p-3'>
         <Card style={{ width: '100%' }} className='border shadow rounded'>
-      <Card.Img variant="top" src="https://assets.myntassets.com/w_200,q_50,,dpr_3,fl_progressive,f_webp/assets/images/31472271/2025/2/21/7cbe9410-a9b3-460c-adeb-f17b4546eedc1740148775321-Campus-Sutra-Men-Comfort-Opaque-Checked-Casual-Shirt-8181740-1.jpg" className='w-100' style={{height:'250px'}}/>
+      <Card.Img variant="top" src={item.thumbnail} className='w-100' style={{height:'250px'}}/>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title style={{fontSize:'15px'}}>{item.title}</Card.Title>
+        {/* <Card.Text>
+          {item.description}
+        </Card.Text> */}
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+         <p className='text-center fw-bolder fs-3 text-primary'> Price : ${item.price}</p>
         </Card.Text>
        <div className='d-flex justify-content-between'>
           <Button variant="danger"><FontAwesomeIcon icon={faHeart} /></Button>
@@ -27,7 +34,10 @@ function Home() {
        </div>
       </Card.Body>
     </Card>
-      </Col>
+      </Col>))
+      
+      :
+      <p>Nothing to display</p>}
     </Row>
     </>
   )

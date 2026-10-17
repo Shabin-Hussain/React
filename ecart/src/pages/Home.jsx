@@ -4,6 +4,8 @@ import { Col, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import useFetch from '../hooks/useFetch';
+import { useDispatch } from 'react-redux';
+import { addToWishlist } from '../redux/slice/wishlistSlice';
 
 
 
@@ -12,8 +14,11 @@ import useFetch from '../hooks/useFetch';
 function Home() {
   const data = useFetch('https://dummyjson.com/products')
   console.log(data);
+
+  const dispatch = useDispatch()
   
   return (
+
     <>
     <Row className='w-100 p-3 my-5'>
       {data?.length>0?
@@ -29,7 +34,7 @@ function Home() {
          <p className='text-center fw-bolder fs-3 text-primary'> Price : ${item.price}</p>
         </Card.Text>
        <div className='d-flex justify-content-between'>
-          <Button variant="danger"><FontAwesomeIcon icon={faHeart} /></Button>
+          <Button variant="danger" onClick={()=>dispatch(addToWishlist(item))}><FontAwesomeIcon icon={faHeart} /></Button>
            <Button variant="success"><FontAwesomeIcon icon={faCartShopping} /></Button>
        </div>
       </Card.Body>

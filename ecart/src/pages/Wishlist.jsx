@@ -1,4 +1,4 @@
-import { faArrowLeft, faCartShopping, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faCartShopping, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Col, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -19,7 +19,7 @@ function Wishlist() {
           bulk of the card's content.
         </Card.Text>
        <div className='d-flex justify-content-between'>
-          <Button variant="danger"><FontAwesomeIcon icon={faHeart} /></Button>
+          <Button variant="danger"><FontAwesomeIcon icon={faTrash} /></Button>
            <Button variant="success"><FontAwesomeIcon icon={faCartShopping} /></Button>
        </div>
       </Card.Body>

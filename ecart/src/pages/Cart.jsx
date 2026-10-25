@@ -1,10 +1,15 @@
 import { faArrowLeft, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useSelector } from 'react-redux';
 
 
 
 
 function Cart() {
+  const cartArray = useSelector((state)=>state.cartReducer)
+  console.log(cartArray);
+  
+
   return (
     <>
     <div className="row w-100">

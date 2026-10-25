@@ -7,13 +7,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import { Badge } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
+
 
 
 
 function Header() {
+     const wishlistArray = useSelector((state)=>state.wishlistReducer)
+     const cartArray = useSelector((state)=>state.cartReducer)
+
   return (
     <>
-    <Navbar expand="lg" className="" style={{backgroundColor:'blueviolet'}}>
+    <Navbar expand="lg" className="w-100" style={{backgroundColor:'blueviolet',top:'0px',position:'fixed',zIndex:'1'}}>
       <Container fluid>
 
       <Link to={'/'} style={{textDecoration:'none'}}>  <Navbar.Brand href="#home" className='ms-md-5 text-white'><FontAwesomeIcon icon={faCartShopping} />E-cart</Navbar.Brand></Link>
@@ -35,9 +40,9 @@ function Header() {
               </NavDropdown.Item>
             </NavDropdown> */}
           </Nav> 
-        <Link to={'/wishlist'}>  <button className='btn border rounded text-white me-md-5'>❤️WishList <Badge bg="secondary">7</Badge>{/* <span className=' px-1 home' >7</span> */}</button></Link>
+        <Link to={'/wishlist'}>  <button className='btn border rounded text-white me-md-5'>❤️WishList <Badge bg="secondary">{wishlistArray.length}</Badge>{/* <span className=' px-1 home' >7</span> */}</button></Link>
 
-          <Link to={'/cart'}> <button className='btn border rounded text-white me-md-4'>🛒Cart <Badge bg="secondary">6</Badge></button></Link>
+          <Link to={'/cart'}> <button className='btn border rounded text-white me-md-4'>🛒Cart <Badge bg="secondary">{cartArray.length}</Badge></button></Link>
 
         </Navbar.Collapse>
       </Container>

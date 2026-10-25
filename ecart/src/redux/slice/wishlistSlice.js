@@ -1,4 +1,6 @@
-const { createSlice } = require("@reduxjs/toolkit");
+import { createSlice } from "@reduxjs/toolkit"
+
+
 
 
 
@@ -14,7 +16,9 @@ export const wishlistSlice = createSlice({
         },
 
         //2)remove from wishlist
-        removeFromWishlist :()=>{}
+        removeFromWishlist :(state,actions)=>{
+            return state.filter(item=>item.id!=actions.payload)
+        }
 
 
     }

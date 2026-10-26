@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromWishlist } from '../redux/slice/wishlistSlice';
 import { addToCart } from '../redux/slice/cartSlice';
+import { Link } from 'react-router-dom';
 
 
 
@@ -47,7 +48,7 @@ function Wishlist() {
   
       <img src="https://cdn.dribbble.com/userupload/20456914/file/still-ae5b582f7f6105e161470db1e0879a19.gif" alt="gif of empty wishlist" />
 
-      <button className='btn btn-primary mt-4'><FontAwesomeIcon icon={faArrowLeft} className='me-2'/></button>
+      <Link to={'/'}><button className='btn btn-primary mt-4'><FontAwesomeIcon icon={faArrowLeft} className='me-2'/>Back to Home</button></Link>
     </div>}
     </>
   )
